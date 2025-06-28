@@ -1,50 +1,12 @@
-I've reviewed the provided HTML file, which appears to be a portfolio/resume for Sahir Zakaria, a Flutter Developer.
-
-Here's a breakdown of the information and a plan for modification:
-
-**Information Check:**
-
-The file presents a comprehensive portfolio with the following key information:
-
-*   **Personal Details:** Sahir Zakaria, Flutter Developer, Computer Engineering graduate from Inonu University (Turkey). Contact email: sahir.alzakaria@gmail.com. Location: Turkey.
-*   **Skills:** Strong in Flutter/Dart, State Management (Provider, Bloc), REST APIs, Firebase/Supabase. Also proficient in Git/GitHub, UI/UX Design Principles, Agile Methodologies, and Problem Solving.
-*   **Experience:** Freelance Flutter Developer (2023-Present) and Flutter Developer Intern at Software Company X (2022-2023).
-*   **Education:** Bachelor of Science in Computer Engineering from Inonu University (2018-2022).
-*   **Certifications:** Google Flutter Development Course and Dart Programming Certification (2023).
-*   **Portfolio:** Examples of E-commerce, Social, Utility, and Educational apps.
-*   **Services:** Custom App Development, UI/UX Design & Prototyping, Technical Consultation, App Maintenance & Updates, Backend Integration, App Deployment & Management.
-*   **Social Links:** LinkedIn, GitHub, Email.
-
-All the information seems consistent and well-presented for a professional portfolio.
-
-**Modification Plan (Simple Arabic Sections):**
-
-To display some sections in Arabic while keeping the core content in English, I will target the following elements for translation:
-
-1.  **Navigation Menu (Header):** Translate the active link text.
-2.  **Hero Section:** Translate the main greetings and the introductory sentence about being a developer.
-3.  **About Section:** Translate the "Get to Know Me" badge and the section heading.
-4.  **Skills Section:** Translate the main section heading.
-5.  **Resume Section:** Translate the main section heading.
-6.  **Portfolio Section:** Translate the main section heading.
-7.  **Services Section:** Translate the main section heading and the service header.
-8.  **Contact Section:** Translate the main section heading.
-9.  **Footer:** Translate the copyright text.
-
-I will use Arabic alongside the existing English text where possible, or replace short, descriptive phrases to achieve a dual-language feel. I will focus on simple, direct translations to maintain the integrity of the design and avoid complex structural changes.
-
-Here's the modified HTML code:
-
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
   
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Sahir Zakaria - Flutter Developer</title>
-  <meta name="description" content="Sahir Zakaria's portfolio, a Flutter Developer with expertise in mobile application development.">
+  <title>Sahir Zakaria - مطور تطبيقات Flutter</title>
+  <meta name="description" content="Portfolio لـ Sahir Zakaria، مطور تطبيقات Flutter متخصص في تطوير التطبيقات النقالة.">
   <meta name="keywords" content="Sahir Zakaria, Flutter Developer, Mobile Apps, Inonu University, Computer Engineering">
 
   <!-- Favicons -->
@@ -54,7 +16,7 @@ Here's the modified HTML code:
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -65,6 +27,16 @@ Here's the modified HTML code:
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body[dir="rtl"] {
+      font-family: 'Tajawal', 'Roboto', sans-serif;
+      text-align: right;
+    }
+    .arabic-section {
+      direction: rtl;
+      text-align: right;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: SnapFolio
@@ -83,12 +55,12 @@ Here's the modified HTML code:
     <div class="header-container d-flex flex-column align-items-start">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>الرئيسية | Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> عني | About</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> السيرة الذاتية | Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> معرض الأعمال | Portfolio</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> الخدمات | Services</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> التواصل | Contact</a></li>
+          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>الرئيسية</a></li>
+          <li><a href="#about"><i class="bi bi-person navicon"></i> عني</a></li>
+          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> السيرة الذاتية</a></li>
+          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> الأعمال</a></li>
+          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> الخدمات</a></li>
+          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> اتصل بي</a></li>
         </ul>
       </nav>
 
@@ -114,14 +86,14 @@ Here's the modified HTML code:
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="hero-text">
+              <div class="hero-text arabic-section">
                 <h1>مرحباً<span class="accent-text">!</span></h1>
-                <h2>أنا ساهر زكريا</h2>
-                <p class="lead">أنا <span class="typed" data-typed-items="مطور فلاتر, مهندس حاسوب, مطور تطبيقات جوال, متحمس للابتكار"></span></p>
-                <p class="description">Passionate about creating exceptional digital experiences that blend innovative design with functional development. Let's bring your vision to life.</p>
+                <h2>ساهر زكريا</h2>
+                <p class="lead">أنا <span class="typed" data-typed-items="مطور Flutter, مهندس حاسوب, مطور تطبيقات نقالة, مهتم بالابتكار"></span></p>
+                <p class="description">شغوف بإنشاء تجارب رقمية استثنائية تجمع بين التصميم المبتكر والتطوير الوظيفي. دعنا نحقق رؤيتك.</p>
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                  <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                  <a href="#portfolio" class="btn btn-primary">عرض أعمالي</a>
+                  <a href="#contact" class="btn btn-outline">تواصل معي</a>
                 </div>
                 <div class="social-links">
                   <a href="https://github.com/sahiralzakaria"><i class="bi bi-github"></i></a>
@@ -162,9 +134,9 @@ Here's the modified HTML code:
                   <i class="bi bi-check-circle-fill"></i>
                 </div>
               </div>
-              <div class="profile-content">
-                <h3>Sahir Zakaria</h3>
-                <p class="profession">Flutter Developer</p>
+              <div class="profile-content arabic-section">
+                <h3>ساهر زكريا</h3>
+                <p class="profession">مطور تطبيقات Flutter</p>
                 <div class="contact-links">
                   <a href="mailto:sahir.alzakaria@gmail.com" class="contact-item">
                     <i class="bi bi-envelope"></i>
@@ -172,62 +144,62 @@ Here's the modified HTML code:
                   </a>
                   <a href="#" class="contact-item">
                     <i class="bi bi-geo-alt"></i>
-                    Turkey
+                    تركيا
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
+            <div class="about-content arabic-section">
               <div class="section-header">
-                <span class="badge-text">تعرف عليّ | Get to Know Me</span>
-                <h2>Passionate About Creating Unique Mobile Digital Experiences</h2>
+                <span class="badge-text">تعرف عليّ</span>
+                <h2>شغوف بإنشاء تجارب رقمية فريدة للتطبيقات النقالة</h2>
               </div>
               <div class="description">
-                <p>I am Sahir Zakaria, a Computer Engineering graduate from Inonu University (Turkey). I have a deep passion for mobile application development using Flutter, focusing on building attractive user interfaces and seamless user experiences.</p>
-                <p>I am always looking for new challenges and opportunities to apply my knowledge and skills in innovative projects that make a positive impact.</p>
+                <p>أنا ساهر زكريا، خريج هندسة الحاسوب من جامعة إينونو (تركيا). لدي شغف عميق بتطوير التطبيقات النقالة باستخدام Flutter، مع التركيز على بناء واجهات مستخدم جذابة وتجارب مستخدم سلسة.</p>
+                <p>أبحث دائمًا عن تحديات وفرص جديدة لتطبيق معرفتي ومهاراتي في مشاريع مبتكرة يكون لها تأثير إيجابي.</p>
               </div>
               <div class="stats-grid">
                 <div class="stat-item">
                   <div class="stat-number">5+</div>
-                  <div class="stat-label">Projects Completed</div>
+                  <div class="stat-label">مشاريع مكتملة</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">2+</div>
-                  <div class="stat-label">Years Experience</div>
+                  <div class="stat-label">سنوات خبرة</div>
                 </div>
               </div>
               <div class="details-grid">
                 <div class="detail-row">
                   <div class="detail-item">
-                    <span class="detail-label">Specialization</span>
-                    <span class="detail-value">Flutter App Development & UI/UX</span>
+                    <span class="detail-label">التخصص</span>
+                    <span class="detail-value">تطوير تطبيقات Flutter وواجهة المستخدم</span>
                   </div>
                   <div class="detail-item">
-                    <span class="detail-label">Experience Level</span>
-                    <span class="detail-value">Mid-Level Developer</span>
+                    <span class="detail-label">مستوى الخبرة</span>
+                    <span class="detail-value">مطور متوسط المستوى</span>
                   </div>
                 </div>
                 <div class="detail-row">
                   <div class="detail-item">
-                    <span class="detail-label">Education</span>
-                    <span class="detail-value">Computer Engineering, Inonu University</span>
+                    <span class="detail-label">التعليم</span>
+                    <span class="detail-value">هندسة الحاسوب، جامعة إينونو</span>
                   </div>
                   <div class="detail-item">
-                    <span class="detail-label">Languages</span>
-                    <span class="detail-value">Arabic, English, Turkish</span>
+                    <span class="detail-label">اللغات</span>
+                    <span class="detail-value">العربية، الإنجليزية، التركية</span>
                   </div>
                 </div>
               </div>
               <div class="cta-section">
                 <a href="#" class="btn btn-primary">
                   <i class="bi bi-download"></i>
-                  Download Resume
+                  تحميل السيرة الذاتية
                 </a>
                 <a href="#contact" class="btn btn-outline">
                   <i class="bi bi-chat-dots"></i>
-                  Let's Talk
+                  تواصل معي
                 </a>
               </div>
             </div>
@@ -236,169 +208,30 @@ Here's the modified HTML code:
       </div>
     </section><!-- /About Section -->
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="stats-wrapper">
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
-                <div class="icon-wrapper">
-                  <i class="bi bi-journal-richtext"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
-              </div><!-- End Stats Item -->
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
-                <div class="icon-wrapper">
-                  <i class="bi bi-headset"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
-              </div><!-- End Stats Item -->
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-wrapper">
-                  <i class="bi bi-code-square"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Years of Development</p>
-              </div><!-- End Stats Item -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>المهارات | Skills</h2>
-        <p>Technologies and languages I master in Flutter app development</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Mobile App Development (Flutter)</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Flutter / Dart</h4>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Building high-performance and visually appealing iOS and Android applications.</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>State Management (Provider, Bloc)</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Effectively managing application state using Provider and Bloc.</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>REST APIs Integration</h4>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Connecting applications with APIs for data exchange.</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Firebase / Supabase</h4>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Utilizing Backend-as-a-Service solutions for rapid application development.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Additional Skills</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Git / GitHub</h4>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Version control and collaboration in projects.</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>UI/UX Design Principles</h4>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Understanding design principles to provide an excellent user experience.</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Agile Methodologies</h4>
-                    <span class="skill-percentage">70%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Ability to work in agile development environments (Scrum, Kanban).</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Problem Solving</h4>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">High ability to analyze problems and find effective solutions.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Skills Section -->
-
     <!-- Resume Section -->
     <section id="resume" class="resume section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>السيرة الذاتية | Resume</h2>
-        <p>An overview of my education, experience, and technical skills</p>
+        <h2>السيرة الذاتية</h2>
+        <p>نظرة عامة على تعليمي وخبراتي ومهاراتي التقنية</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-4">
-            <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
+            <div class="resume-side arabic-section" data-aos="fade-right" data-aos-delay="100">
               <div class="profile-img mb-4">
                 <img src="assets/img/profile/profile-square-2.webp" alt="Profile" class="img-fluid rounded">
               </div>
-              <h3>Professional Summary</h3>
-              <p>Passionate Flutter Developer with experience in building cross-platform mobile applications (iOS/Android). I focus on delivering excellent user experiences and clean, maintainable code.</p>
-              <h3 class="mt-4">Contact Information</h3>
+              <h3>ملخص مهني</h3>
+              <p>مطور Flutter شغوف لديه خبرة في بناء تطبيقات نقالة متعددة المنصات (iOS/Android). أركز على تقديم تجارب مستخدم ممتازة وكتابة كود نظيف وسهل الصيانة.</p>
+              <h3 class="mt-4">معلومات الاتصال</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> Turkey</li>
+                <li><i class="bi bi-geo-alt"></i> تركيا</li>
                 <li><i class="bi bi-envelope"></i> sahir.alzakaria@gmail.com</li>
                 <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/sahir-zakaria-39873531b" target="_blank">www.linkedin.com/in/sahir-zakaria-39873531b</a></li>
                 <li><i class="bi bi-github"></i> <a href="https://github.com/sahiralzakaria" target="_blank">github.com/sahiralzakaria</a></li>
               </ul>
               <div class="skills-animation mt-4">
-                <h3>Key Technical Skills</h3>
+                <h3>المهارات التقنية الرئيسية</h3>
                 <div class="skill-item">
                   <div class="d-flex justify-content-between">
                     <span>Flutter / Dart</span>
@@ -419,7 +252,7 @@ Here's the modified HTML code:
                 </div>
                 <div class="skill-item">
                   <div class="d-flex justify-content-between">
-                    <span>UI/UX Principles</span>
+                    <span>مبادئ UI/UX</span>
                     <span>75%</span>
                   </div>
                   <div class="progress">
@@ -439,49 +272,49 @@ Here's the modified HTML code:
             </div>
           </div>
           <div class="col-lg-8 ps-4 ps-lg-5">
-            <div class="resume-section" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
+            <div class="resume-section arabic-section" data-aos="fade-up">
+              <h3><i class="bi bi-briefcase me-2"></i>الخبرة المهنية</h3>
               <div class="resume-item">
-                <h4>Freelance Flutter Developer</h4>
-                <h5>2023 - Present</h5>
-                <p class="company"><i class="bi bi-building"></i> Independent Projects</p>
+                <h4>مطور Flutter مستقل</h4>
+                <h5>2023 - الحاضر</h5>
+                <p class="company"><i class="bi bi-building"></i> مشاريع مستقلة</p>
                 <ul>
-                  <li>Developed and maintained various Flutter applications for different clients.</li>
-                  <li>Optimized application performance and user experience.</li>
-                  <li>Worked on the full app lifecycle from design to deployment.</li>
+                  <li>تطوير وصيانة تطبيقات Flutter متنوعة لعملاء مختلفين.</li>
+                  <li>تحسين أداء التطبيق وتجربة المستخدم.</li>
+                  <li>العمل على دورة حياة التطبيق الكاملة من التصميم إلى النشر.</li>
                 </ul>
               </div>
               <div class="resume-item">
-                <h4>Flutter Developer Intern</h4>
+                <h4>متدرب كمطور Flutter</h4>
                 <h5>2022 - 2023</h5>
-                <p class="company"><i class="bi bi-building"></i> Software Company X</p>
+                <p class="company"><i class="bi bi-building"></i> شركة برمجيات X</p>
                 <ul>
-                  <li>Contributed to the development of new features for Flutter applications under supervision.</li>
-                  <li>Fixed bugs and refactored code.</li>
-                  <li>Continuously learned best practices in Flutter.</li>
+                  <li>المساهمة في تطوير ميزات جديدة لتطبيقات Flutter تحت الإشراف.</li>
+                  <li>إصلاح الأخطاء وإعادة هيكلة الكود.</li>
+                  <li>التعلم المستمر لأفضل الممارسات في Flutter.</li>
                 </ul>
               </div>
             </div>
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+            <div class="resume-section arabic-section" data-aos="fade-up" data-aos-delay="100">
+              <h3><i class="bi bi-mortarboard me-2"></i>التعليم</h3>
               <div class="resume-item">
-                <h4>Bachelor of Science in Computer Engineering</h4>
+                <h4>بكالوريوس علوم في هندسة الحاسوب</h4>
                 <h5>2018 - 2022</h5>
-                <p class="company"><i class="bi bi-building"></i> Inonu University (İnönü Üniversitesi)</p>
-                <p>Specialized in computer science and software engineering, with a focus on system and software development.</p>
+                <p class="company"><i class="bi bi-building"></i> جامعة إينونو (İnönü Üniversitesi)</p>
+                <p>تخصص في علوم الحاسوب وهندسة البرمجيات، مع التركيز على تطوير الأنظمة والبرمجيات.</p>
               </div>
             </div>
-            <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-award me-2"></i>Certifications</h3>
+            <div class="resume-section arabic-section" data-aos="fade-up" data-aos-delay="200">
+              <h3><i class="bi bi-award me-2"></i>الشهادات</h3>
               <div class="resume-item">
-                <h4>Google Flutter Development Course</h4>
+                <h4>دورة تطوير تطبيقات Flutter من جوجل</h4>
                 <h5>2023</h5>
-                <p>Certificate of completion for Google Developers' Flutter Development Course.</p>
+                <p>شهادة إتمام دورة تطوير تطبيقات Flutter من مطوري جوجل.</p>
               </div>
               <div class="resume-item">
-                <h4>Dart Programming Certification</h4>
+                <h4>شهادة برمجة Dart</h4>
                 <h5>2023</h5>
-                <p>Certification in Dart programming language.</p>
+                <p>شهادة في لغة برمجة Dart.</p>
               </div>
             </div>
           </div>
@@ -489,261 +322,25 @@ Here's the modified HTML code:
       </div>
     </section><!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>معرض الأعمال | Portfolio</h2>
-        <p>Some of my best projects in Flutter app development</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <div class="row">
-            <div class="col-lg-3 filter-sidebar">
-              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-                <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-e-commerce">E-commerce Apps</li>
-                  <li data-filter=".filter-social">Social Apps</li>
-                  <li data-filter=".filter-utility">Utility Apps</li>
-                  <li data-filter=".filter-learning">Educational Apps</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-9">
-              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-e-commerce">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/e-commerce-app.webp" class="img-fluid" alt="E-commerce App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">E-commerce App</span>
-                        <h4>Online Clothing Store</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/e-commerce-app.webp" class="glightbox" title="Online Clothing Store"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-social">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/social-media-app.webp" class="img-fluid" alt="Social Media App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Social App</span>
-                        <h4>Community Sharing App</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/social-media-app.webp" class="glightbox" title="Community Sharing App"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-utility">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/task-manager-app.webp" class="img-fluid" alt="Task Manager App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Utility App</span>
-                        <h4>Daily Task Manager</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/task-manager-app.webp" class="glightbox" title="Daily Task Manager"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-learning">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/quiz-app.webp" class="img-fluid" alt="Quiz App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Educational App</span>
-                        <h4>Interactive Quiz Application</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/quiz-app.webp" class="glightbox" title="Interactive Quiz Application"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-e-commerce">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/food-delivery-app.webp" class="img-fluid" alt="Food Delivery App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">E-commerce App</span>
-                        <h4>Food Delivery App (Example)</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/food-delivery-app.webp" class="glightbox" title="Food Delivery App"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-utility">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/weather-app.webp" class="img-fluid" alt="Weather App" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Utility App</span>
-                        <h4>Weather Forecast App (Example)</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/weather-app.webp" class="glightbox" title="Weather Forecast App"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>الخدمات | Services</h2>
-        <p>The services I offer in Flutter app development</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-header">
-          <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12">
-              <div class="service-intro">
-                <h2 class="service-heading">
-                  <div>حلول مبتكرة لـ</div>
-                  <div><span>تطوير تطبيقات فلاتر</span></div>
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="service-summary">
-                <p>I offer a comprehensive set of services in Flutter app development, from concept to deployment, to ensure a unique user experience and high performance.</p>
-                <a href="#" class="service-btn">
-                  View All Services
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-phone"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">Custom App <span>Development</span></a>
-              </h3>
-              <p>Building custom Flutter applications that meet your unique business needs, with a focus on attractive design and robust functionality.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-brush"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">UI/UX Design <span>& Prototyping</span></a>
-              </h3>
-              <p>Designing intuitive and engaging user interfaces to ensure a smooth and enjoyable user experience in your applications.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">Technical <span>Consultation</span></a>
-              </h3>
-              <p>Providing technical advice on best practices, tools, and technologies for successful Flutter application development.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-tools"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">App Maintenance <span>& Updates</span></a>
-              </h3>
-              <p>Maintaining and updating existing applications, adding new features, and ensuring compatibility with the latest OS versions.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-cloud"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">Backend <span>Integration</span></a>
-              </h3>
-              <p>Connecting Flutter applications with backend services (e.g., Firebase, Supabase, custom APIs) for data management and authentication.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-app-indicator"></i>
-              </div>
-              <a href="#" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-              <h3>
-                <a href="#">App Deployment <span>& Management</span></a>
-              </h3>
-              <p>Assisting with app deployment to app stores (Google Play Store and Apple App Store) and managing releases.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Services Section -->
-
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>تواصل معي | Contact Me</h2>
-        <p>I'd be delighted to hear from you and discuss your projects</p>
+      <div class="container section-title arabic-section" data-aos="fade-up">
+        <h2>اتصل بي</h2>
+        <p>يسعدني أن أسمع منك وأناقش مشاريعك</p>
       </div>
       <div class="container">
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
-            <div class="info-box">
-              <h3>Contact Info</h3>
-              <p>Feel free to reach out to me through the following methods for any inquiries or job offers.</p>
+            <div class="info-box arabic-section">
+              <h3>معلومات الاتصال</h3>
+              <p>لا تتردد في التواصل معي من خلال الطرق التالية لأي استفسارات أو عروض عمل.</p>
               <div class="info-item">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Location</h4>
-                  <p>Turkey</p>
+                  <h4>الموقع</h4>
+                  <p>تركيا</p>
                 </div>
               </div>
               <div class="info-item">
@@ -751,7 +348,7 @@ Here's the modified HTML code:
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
+                  <h4>البريد الإلكتروني</h4>
                   <p>sahir.alzakaria@gmail.com</p>
                 </div>
               </div>
@@ -776,28 +373,28 @@ Here's the modified HTML code:
             </div>
           </div>
           <div class="col-lg-7">
-            <div class="contact-form">
-              <h3>Get In Touch Directly</h3>
-              <p>Fill out the form below and I will get back to you as soon as possible.</p>
+            <div class="contact-form arabic-section">
+              <h3>تواصل معي مباشرة</h3>
+              <p>املأ النموذج أدناه وسأعود إليك في أقرب وقت ممكن.</p>
               <form action="forms/contact.php" method="post" class="php-email-form">
                 <div class="row gy-4">
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" name="name" class="form-control" placeholder="اسمك" required>
                   </div>
                   <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    <input type="email" class="form-control" name="email" placeholder="بريدك الإلكتروني" required>
                   </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    <input type="text" class="form-control" name="subject" placeholder="الموضوع" required>
                   </div>
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="الرسالة" required></textarea>
                   </div>
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
+                    <div class="loading">جاري التحميل</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit" class="btn">Send Message</button>
+                    <div class="sent-message">تم إرسال رسالتك. شكراً لك!</div>
+                    <button type="submit" class="btn">إرسال الرسالة</button>
                   </div>
                 </div>
               </form>
@@ -815,7 +412,7 @@ Here's the modified HTML code:
         <p>© <span>حقوق النشر</span> <strong class="px-1 sitename">ساهر زكريا</strong> <span>جميع الحقوق محفوظة</span></p>
       </div>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        صمم بواسطة <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer>
@@ -843,4 +440,3 @@ Here's the modified HTML code:
 
 </body>
 </html>
-```
