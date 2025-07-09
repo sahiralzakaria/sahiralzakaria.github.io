@@ -745,6 +745,7 @@
   <script src="assets/js/main.js"></script>
 
   <!-- Custom Form Handling Script -->
+  <script>
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
   const form = this;
@@ -789,7 +790,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     errorMessage.textContent = `Error: ${error.message || 'Unable to send message. Please try again later.'}`;
   });
 });
+  </script>
 
+  
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://sahiralzakaria.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
