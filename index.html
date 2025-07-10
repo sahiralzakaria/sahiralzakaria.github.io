@@ -682,30 +682,34 @@
             <div class="contact-form">
               <h3>Get In Touch Directly</h3>
               <p>Fill out the form below and I will get back to you as soon as possible.</p>
-              <form action="https://formsubmit.co/sahir.alzakaria@gmail.com" method="POST" class="php-email-form" id="contact-form">
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                  </div>
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                  </div>
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                  </div>
-                  <div class="col-12 text-center">
-                    <div class="loading" style="display: none;">Loading</div>
-                    <div class="error-message" style="display: none;"></div>
-                    <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://sahiralzakaria.github.io/thanks.html">
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-                </div>
-              </form>
+<form action="https://formspree.io/f/mqabrzpy" method="POST" class="php-email-form" id="contact-form">
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="col-12">
+      <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+    </div>
+    <div class="col-12">
+      <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <div class="loading" style="display: none;">Loading</div>
+      <div class="error-message" style="display: none;"></div>
+      <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+
+      <!-- إعدادات Formspree الإضافية -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://sahiralzakaria.github.io/thanks.html">
+
+      <button type="submit" class="btn">Send Message</button>
+    </div>
+  </div>
+</form>
+
             </div>
           </div>
         </div>
@@ -747,59 +751,40 @@
   <!-- Custom Form Handling Script -->
   
 <script>
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-    const form = this;
-    const loading = form.querySelector('.loading');
-    const errorMessage = form.querySelector('.error-message');
-    const sentMessage = form.querySelector('.sent-message');
-    
-    // إظهار حالة التحميل وإخفاء الرسائل الأخرى
-    loading.style.display = 'block';
-    errorMessage.style.display = 'none';
-    sentMessage.style.display = 'none';
-
-    try {
-        // تسجيل الرابط لأغراض تصحيح الأخطاء
-        console.log('محاولة الإرسال إلى:', form.action);
-        
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        console.log('استجابة الخادم:', response);
-
-        // معالجة الاستجابة
-        if (response.ok || response.status === 302) {
-            // حالة النجاح
-            loading.style.display = 'none';
-            sentMessage.style.display = 'block';
-            form.reset();
-        } else {
-            // محاولة قراءة رسالة الخطأ من الخادم
-            const errorData = await response.json().catch(() => null);
-            throw new Error(errorData?.message || `خطأ في الخادم: ${response.status}`);
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+      const form = this;
+      const loading = form.querySelector('.loading');
+      const errorMessage = form.querySelector('.error-message');
+      const sentMessage = form.querySelector('.sent-message');
+      // Show loading state
+      loading.style.display = 'block';
+      errorMessage.style.display = 'none';
+      sentMessage.style.display = 'none';
+      // Submit form via Formsubmit
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
         }
-    } catch (error) {
-        console.error('حدث خطأ:', error);
+      })
+      .then(response => {
+        if (response.ok) {
+          loading.style.display = 'none';
+          sentMessage.style.display = 'block';
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
-        
-        // رسائل خطأ مخصصة حسب نوع الخطأ
-        if (error.message.includes('404')) {
-            errorMessage.textContent = 'رابط الإرسال غير صحيح. الرجاء التحقق من إعدادات النموذج.';
-        } else if (error.message.includes('NetworkError')) {
-            errorMessage.textContent = 'مشكلة في الاتصال بالخادم. الرجاء التحقق من اتصال الإنترنت.';
-        } else {
-            errorMessage.textContent = error.message || 'حدث خطأ غير متوقع أثناء الإرسال.';
-        }
-    }
-});
-</script>
+        errorMessage.textContent = 'Error: Unable to send message. Please try again later.';
+      });
+    });
+  </script>
 
   
   <!-- GoatCounter Analytics -->
