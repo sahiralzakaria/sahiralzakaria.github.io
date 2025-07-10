@@ -747,54 +747,58 @@
   <!-- Custom Form Handling Script -->
   
 <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const form = this;
-        const loading = form.querySelector('.loading');
-        const errorMessage = form.querySelector('.error-message');
-        const sentMessage = form.querySelector('.sent-message');
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const form = this;
+    const loading = form.querySelector('.loading');
+    const errorMessage = form.querySelector('.error-message');
+    const sentMessage = form.querySelector('.sent-message');
+    
+    // إظهار حالة التحميل وإخفاء الرسائل الأخرى
+    loading.style.display = 'block';
+    errorMessage.style.display = 'none';
+    sentMessage.style.display = 'none';
+
+    try {
+        // تسجيل الرابط لأغراض تصحيح الأخطاء
+        console.log('محاولة الإرسال إلى:', form.action);
         
-        // Show loading state
-        loading.style.display = 'block';
-        errorMessage.style.display = 'none';
-        sentMessage.style.display = 'none';
-        
-        // Submit form via Fetch API
-        fetch(form.action, {
+        const response = await fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             headers: {
                 'Accept': 'application/json'
             }
-        })
-        .then(response => {
-            console.log('Server response:', response); // For debugging
-            
-            // Check if response status is in the range 200-299
-            if (response.status >= 200 && response.status < 300) {
-                // Success - hide loading and show success message
-                loading.style.display = 'none';
-                sentMessage.style.display = 'block';
-                form.reset();
-            } else {
-                // Server returned an error status
-                return response.json().then(err => {
-                    throw new Error(err.message || 'Form submission failed');
-                }).catch(() => {
-                    throw new Error(`Server returned status: ${response.status}`);
-                });
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error); // For debugging
-            loading.style.display = 'none';
-            errorMessage.style.display = 'block';
-            
-            // More specific error message
-            errorMessage.textContent = typeof error === 'string' ? error : 
-                error.message || 'Error: Unable to send message. Please try again later.';
         });
-    });
+
+        console.log('استجابة الخادم:', response);
+
+        // معالجة الاستجابة
+        if (response.ok || response.status === 302) {
+            // حالة النجاح
+            loading.style.display = 'none';
+            sentMessage.style.display = 'block';
+            form.reset();
+        } else {
+            // محاولة قراءة رسالة الخطأ من الخادم
+            const errorData = await response.json().catch(() => null);
+            throw new Error(errorData?.message || `خطأ في الخادم: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('حدث خطأ:', error);
+        loading.style.display = 'none';
+        errorMessage.style.display = 'block';
+        
+        // رسائل خطأ مخصصة حسب نوع الخطأ
+        if (error.message.includes('404')) {
+            errorMessage.textContent = 'رابط الإرسال غير صحيح. الرجاء التحقق من إعدادات النموذج.';
+        } else if (error.message.includes('NetworkError')) {
+            errorMessage.textContent = 'مشكلة في الاتصال بالخادم. الرجاء التحقق من اتصال الإنترنت.';
+        } else {
+            errorMessage.textContent = error.message || 'حدث خطأ غير متوقع أثناء الإرسال.';
+        }
+    }
+});
 </script>
 
   
