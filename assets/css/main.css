@@ -148,19 +148,21 @@ h6 {
   position: fixed;
   top: 0;
   left: 0;
-  height: 80px; /* ارتفاع الشريط العلوي */
-  width: 100%; /* يمتد على عرض الصفحة */
+  height: 80px;
+  width: 100%;
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; 
   transition: all ease-in-out 0.3s;
   z-index: 997;
+  background-color: var(--background-color);
 }
 
 .header .header-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 0;
   background: none;
@@ -248,17 +250,26 @@ h6 {
 
 .navmenu ul {
   display: flex;
+  justify-content: center;  /* توسيط القائمة */
   align-items: center;
-  padding: 0;
+  gap: 30px; /* المسافة بين عناصر القائمة */
+  list-style: none; /* إزالة النقاط */
   margin: 0;
+  padding: 0;
 }
 
 .navmenu li {
-  margin-right: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .navmenu a {
   padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--nav-color);
+  transition: 0.3s;
 }
 
 .navmenu a,
