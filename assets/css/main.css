@@ -1756,6 +1756,7 @@ section,
   bottom: 0;
   left: 0;
   right: 0;
+  
   padding: 25px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: 3;
@@ -1825,6 +1826,29 @@ section,
 .portfolio .portfolio-wrap:hover .portfolio-info .content {
   transform: translateY(0);
 }
+
+.project-img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  }
+  .tech-icons i {
+    opacity: 0.8;
+  }
+  .tech-icons i:hover {
+    opacity: 1;
+  }
 
 /*--------------------------------------------------------------
 # Services Section
@@ -2683,22 +2707,6 @@ section,
   font-size: 14px;
 }
 
-.project-video {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-
-.project-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-}
-
-
 @media (max-width: 991px) {
 
   .service-details .service-info,
@@ -2707,20 +2715,7 @@ section,
   }
 }
 
- .portfolio-item {
-    transition: 0.3s;
-    background: #fff;
-  }
-  .portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-  }
-  .tech-icons i {
-    opacity: 0.8;
-  }
-  .tech-icons i:hover {
-    opacity: 1;
-  }
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
