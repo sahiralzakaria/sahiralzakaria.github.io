@@ -148,20 +148,25 @@ h6 {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  padding: 0 15px;
-  width: 300px;
+  height: 80px; /* ارتفاع الشريط العلوي */
+  width: 100%; /* يمتد على عرض الصفحة */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   transition: all ease-in-out 0.3s;
-  overflow-y: auto;
   z-index: 997;
 }
 
 .header .header-container {
-  border-radius: 20px;
-  padding: 15px;
-  background-color: var(--background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
 }
+
 
 .header .social-links {
   margin: 0 0 10px 0;
@@ -188,12 +193,12 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
-  .header~main,
-  .header~#footer {
-    margin-left: 330px;
+  .header ~ main,
+  .header ~ #footer {
+    margin-top: 100px; /* مساحة تحت الشريط العلوي */
   }
 }
+
 
 @media (max-width: 1199px) {
   .header {
@@ -242,9 +247,18 @@ h6 {
 }
 
 .navmenu ul {
-  list-style: none;
-  padding: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
   margin: 0;
+}
+
+.navmenu li {
+  margin-right: 20px;
+}
+
+.navmenu a {
+  padding: 10px 15px;
 }
 
 .navmenu a,
