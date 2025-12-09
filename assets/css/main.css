@@ -1827,28 +1827,48 @@ section,
   transform: translateY(0);
 }
 
-.project-img {
-  max-height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-
 .portfolio-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #0f0f0f;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+  padding-bottom: 25px;
 }
 
-  .portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-  }
-  .tech-icons i {
-    opacity: 0.8;
-  }
-  .tech-icons i:hover {
-    opacity: 1;
-  }
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.project-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-desc {
+  color: #ffffff !important;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tech-icons i {
+  color: #fff;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.tech-icons i:hover {
+  opacity: 1;
+}
+
+h4 {
+  color: #fff;
+}
+
+.section-title p {
+  color: #ddd;
+}
+
 
 /*--------------------------------------------------------------
 # Services Section
