@@ -197,7 +197,7 @@ h6 {
 @media (min-width: 1200px) {
   .header ~ main,
   .header ~ #footer {
-    margin-top: 100px; /* مساحة تحت الشريط العلوي */
+    margin-top: 100px;
   }
 }
 
@@ -216,7 +216,7 @@ h6 {
   color: var(--contrast-color);
   background-color: var(--accent-color);
   font-size: 22px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -229,6 +229,7 @@ h6 {
   z-index: 9999;
   transition: background-color 0.3s;
 }
+
 
 .header .header-toggle:hover {
   color: var(--contrast-color);
