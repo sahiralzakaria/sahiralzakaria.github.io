@@ -2707,6 +2707,20 @@ section,
   }
 }
 
+ .portfolio-item {
+    transition: 0.3s;
+    background: #fff;
+  }
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  }
+  .tech-icons i {
+    opacity: 0.8;
+  }
+  .tech-icons i:hover {
+    opacity: 1;
+  }
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -2714,3 +2728,5 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
