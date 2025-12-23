@@ -947,6 +947,11 @@ section,
         font-size: 16px;
     }
 
+    .hero .hero-text .hero-actions {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
     .hero .hero-actions {
         justify-content: center;
     }
