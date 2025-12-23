@@ -392,6 +392,10 @@ h6 {
         border-top: 1px solid rgba(0, 0, 0, 0.08);
         padding: 20px 0;
     }
+
+    .hero-content {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -901,6 +905,11 @@ section,
 
     .profile-header {
         display: none;
+    }
+
+    .hero .hero-visual {
+        order: -1;
+        margin-bottom: 40px;
     }
 }
 
