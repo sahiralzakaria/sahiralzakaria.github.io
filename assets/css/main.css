@@ -1,52 +1,45 @@
-/* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Ubuntu",  sans-serif;
-  --nav-font: "Nunito",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Ubuntu", sans-serif;
+  --nav-font: "Nunito", sans-serif;
 }
 
-:root { 
-  --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
-  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #9b805a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #9b805a; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #393939; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #393939; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #9b805a; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #2c2c2c;
-  --surface-color: #323232;
-}
-
-.dark-background {
-  --background-color: #040b14;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --background-color: #ffffff;
+  --default-color: #333333;
+  --heading-color: #1a1a1a;
+  --accent-color: #9b805a;
+  --surface-color: #f8f9fa;
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
+:root {
+  --nav-color: #333333;
+  --nav-hover-color: #9b805a;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #333333;
+  --nav-dropdown-hover-color: #9b805a;
+}
+
+
+.light-background {
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #fafafa;
+  --default-color: #333333;
+  --heading-color: #1a1a1a;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -60,7 +53,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--accent-color), black 25%);
   text-decoration: none;
 }
 
@@ -74,11 +67,10 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #dc3545;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -89,7 +81,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #28a745;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -126,11 +118,8 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
 .header {
-  --background-color: #1b1b1b;
+  --background-color: #ffffff;
   color: var(--default-color);
   position: fixed;
   top: 0;
@@ -140,7 +129,7 @@ h6 {
   transition: all ease-in-out 0.3s;
   z-index: 997;
   background-color: var(--background-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .header .header-container {
@@ -154,9 +143,7 @@ h6 {
   border: none;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+
 .navmenu {
   width: 100%;
   padding: 0;
@@ -227,9 +214,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Social Links
---------------------------------------------------------------*/
+
 .header .social-links {
   display: flex;
   justify-content: center;
@@ -237,7 +222,7 @@ h6 {
   gap: 12px;
   margin: 12px 0 0 0;
   padding: 10px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   width: 100%;
 }
 
@@ -246,8 +231,8 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
   border-radius: 50%;
   width: 42px;
   height: 42px;
@@ -277,12 +262,10 @@ h6 {
 .header .social-links a:hover {
   color: var(--contrast-color);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/*--------------------------------------------------------------
-# Dropdown Menu
---------------------------------------------------------------*/
+
 .navmenu .dropdown {
   position: relative;
 }
@@ -296,14 +279,14 @@ h6 {
   padding: 10px;
   margin: 5px 0 0 0;
   background-color: var(--nav-dropdown-background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 99;
   transition: all 0.3s ease;
 }
 
-.navmenu .dropdown:hover > ul {
+.navmenu .dropdown:hover>ul {
   display: block;
   animation: fadeInDown 0.3s ease;
 }
@@ -343,9 +326,7 @@ h6 {
   transform: rotate(180deg);
 }
 
-/*--------------------------------------------------------------
-# Mobile Toggle Button
---------------------------------------------------------------*/
+
 .header .header-toggle {
   color: var(--contrast-color);
   background-color: var(--accent-color);
@@ -362,20 +343,19 @@ h6 {
   right: 15px;
   z-index: 9999;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .header .header-toggle:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, black 15%);
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
-# Responsive Design
---------------------------------------------------------------*/
+
 @media (min-width: 1200px) {
-  .header ~ main,
-  .header ~ #footer {
+
+  .header~main,
+  .header~#footer {
     margin-top: 140px;
   }
 }
@@ -386,29 +366,29 @@ h6 {
     height: 100vh;
     overflow-y: auto;
   }
-  
+
   .header.header-show {
     left: 0;
   }
-  
+
   .header .header-toggle {
     display: flex;
   }
-  
+
   .navmenu ul {
     flex-direction: column;
     gap: 15px;
     padding: 20px 0;
   }
-  
+
   .navmenu a {
     width: 100%;
     justify-content: flex-start;
     padding: 12px 20px;
   }
-  
+
   .header .social-links {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding: 20px 0;
   }
 }
@@ -417,12 +397,12 @@ h6 {
   .navmenu ul {
     gap: 10px;
   }
-  
+
   .navmenu a {
     font-size: 15px;
     padding: 10px 15px;
   }
-  
+
   .header .social-links a {
     width: 40px;
     height: 40px;
@@ -430,14 +410,13 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -448,20 +427,19 @@ h6 {
   display: none;
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--surface-color);
   font-size: 14px;
   padding: 0 0 40px 0;
   position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .footer .copyright {
   padding-top: 40px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .footer .copyright p {
@@ -474,9 +452,7 @@ h6 {
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+
 #preloader {
   position: fixed;
   inset: 0;
@@ -491,7 +467,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid #e0e0e0;
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -509,9 +485,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
+
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -533,7 +507,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color), black 20%);
   color: var(--contrast-color);
 }
 
@@ -543,18 +517,14 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
+
 .page-title {
   color: var(--default-color);
   padding: 40px 0 20px 0;
@@ -562,7 +532,7 @@ h6 {
 }
 
 .page-title .container {
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding-bottom: 20px;
 }
 
@@ -589,12 +559,10 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: rgba(0, 0, 0, 0.4);
 }
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
+
 section,
 .section {
   color: var(--default-color);
@@ -603,9 +571,7 @@ section,
   overflow: clip;
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
+
 .section-title {
   text-align: center;
   padding-bottom: 40px;
@@ -639,15 +605,14 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+
 .hero {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
 .hero .background-elements {
@@ -663,7 +628,7 @@ section,
 .hero .background-elements .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 95%));
+  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 85%), color-mix(in srgb, var(--accent-color), transparent 93%));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -740,7 +705,7 @@ section,
 .hero .hero-text .description {
   font-size: 18px;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgba(0, 0, 0, 0.65);
   margin-bottom: 40px;
   max-width: 500px;
 }
@@ -769,9 +734,9 @@ section,
 }
 
 .hero .hero-actions .btn.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .hero .hero-actions .btn.btn-outline {
@@ -798,17 +763,18 @@ section,
   align-items: center;
   justify-content: center;
   background-color: var(--surface-color);
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   font-size: 20px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .hero .social-links a:hover {
   color: var(--contrast-color);
   background-color: var(--accent-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .hero .hero-visual {
@@ -826,12 +792,11 @@ section,
 
 .hero .hero-visual .profile-container .profile-background {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
-  border-radius: 30px;
+  border-radius: 50%;
   z-index: 1;
 }
 
@@ -840,9 +805,10 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border: 5px solid var(--surface-color);
 }
 
 .hero .hero-visual .profile-container .floating-elements .floating-icon {
@@ -856,8 +822,9 @@ section,
   justify-content: center;
   font-size: 24px;
   color: var(--accent-color);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   animation: floatIcon 4s ease-in-out infinite;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .hero .hero-visual .profile-container .floating-elements .floating-icon.icon-1 {
@@ -985,16 +952,14 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+
 .about .profile-card {
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--surface-color), var(--accent-color) 5%) 100%);
+  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--surface-color), var(--accent-color) 3%) 100%);
   border-radius: 2rem;
   padding: 2.5rem;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -1006,7 +971,7 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #e0e0e0 30%));
 }
 
 @media (max-width: 991px) {
@@ -1027,7 +992,7 @@ section,
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--accent-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .about .profile-header .profile-image img {
@@ -1079,19 +1044,19 @@ section,
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
-  background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 50%);
+  background-color: #ffffff;
   border-radius: 0.75rem;
   text-decoration: none;
   color: var(--default-color);
   transition: all 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .about .contact-links .contact-item:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px color-mix(in srgb, var(--accent-color), transparent 70%);
+  box-shadow: 0 5px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .about .contact-links .contact-item i {
@@ -1115,7 +1080,7 @@ section,
 
 .about .about-content .section-header .badge-text {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #666666 20%));
   color: var(--contrast-color);
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
@@ -1145,7 +1110,7 @@ section,
 .about .about-content .description p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgba(0, 0, 0, 0.65);
   margin-bottom: 1.5rem;
 }
 
@@ -1161,7 +1126,8 @@ section,
   padding: 2rem;
   background-color: var(--surface-color);
   border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -1186,7 +1152,7 @@ section,
 
 .about .stats-grid .stat-item .stat-label {
   font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
@@ -1215,7 +1181,7 @@ section,
 .about .details-grid .detail-item .detail-label {
   display: block;
   font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(0, 0, 0, 0.45);
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -1253,13 +1219,13 @@ section,
 .about .cta-section .btn.btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 15%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 50%);
 }
 
 .about .cta-section .btn.btn-outline {
   background-color: transparent;
   color: var(--default-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 .about .cta-section .btn.btn-outline:hover {
@@ -1267,9 +1233,7 @@ section,
   transform: translateY(-2px);
 }
 
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
+
 .stats .stats-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1289,19 +1253,20 @@ section,
 }
 
 .stats .stats-item {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--surface-color), transparent 5%), var(--surface-color));
+  background: linear-gradient(135deg, #ffffff, var(--surface-color));
   border-radius: 15px;
   padding: 40px 20px;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .stats .stats-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .stats .stats-item:hover .icon-wrapper {
@@ -1374,20 +1339,20 @@ section,
   opacity: 0.8;
 }
 
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
+
 .skills .skills-category {
   background-color: var(--surface-color);
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   height: 100%;
   transition: transform 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .skills .skills-category:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
 }
 
 .skills .skills-category h3 {
@@ -1422,12 +1387,12 @@ section,
 
 .skills .skill-item .skill-percentage {
   font-size: 14px;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .skills .skill-item .progress {
   height: 8px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -1443,7 +1408,7 @@ section,
 
 .skills .skill-item .skill-tooltip {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(0, 0, 0, 0.55);
   margin-top: 8px;
   opacity: 0;
   transform: translateY(-5px);
@@ -1464,11 +1429,13 @@ section,
   height: 100%;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .skills .skill-box:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
 .skills .skill-box:hover i {
@@ -1496,7 +1463,7 @@ section,
 
 .skills .skill-box .skill-tooltip {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(0, 0, 0, 0.55);
   opacity: 0;
   transform: translateY(5px);
   transition: all 0.3s;
@@ -1522,15 +1489,14 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
+
 .resume .resume-side {
   background-color: var(--surface-color);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
   height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .resume .resume-side .profile-img {
@@ -1574,7 +1540,7 @@ section,
 
 .resume .resume-side .skill-item .progress {
   height: 8px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
   border-radius: 4px;
   margin-top: 0.5rem;
 }
@@ -1602,7 +1568,7 @@ section,
 
 .resume .resume-section .resume-item {
   padding-left: 1.5rem;
-  border-left: 2px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-left: 2px solid color-mix(in srgb, var(--accent-color), transparent 75%);
   margin-bottom: 2rem;
   position: relative;
 }
@@ -1661,9 +1627,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
+
 @media (max-width: 991px) {
   .portfolio .filter-sidebar {
     margin-bottom: 30px;
@@ -1671,10 +1635,11 @@ section,
 }
 
 .portfolio .filters-wrapper {
-  background-color: color-mix(in srgb, var(--surface-color), var(--default-color) 3%);
+  background-color: var(--surface-color);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 991px) {
@@ -1717,20 +1682,20 @@ section,
 @media (max-width: 991px) {
   .portfolio .portfolio-filters li {
     padding: 8px 16px;
-    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
     border-left-width: 3px;
   }
 }
 
 .portfolio .portfolio-filters li:hover {
   color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   border-left-color: color-mix(in srgb, var(--accent-color), transparent 50%);
 }
 
 .portfolio .portfolio-filters li.filter-active {
   color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   border-left-color: var(--accent-color);
   font-weight: 600;
 }
@@ -1740,8 +1705,9 @@ section,
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
   height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .portfolio .portfolio-wrap img {
@@ -1756,9 +1722,8 @@ section,
   bottom: 0;
   left: 0;
   right: 0;
-  
   padding: 25px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: 3;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translateY(20px);
@@ -1812,6 +1777,7 @@ section,
 
 .portfolio .portfolio-wrap:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio .portfolio-wrap:hover img {
@@ -1828,14 +1794,15 @@ section,
 }
 
 .portfolio-item {
-  border: 1px solid #222;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
   padding-bottom: 25px;
+  background-color: var(--surface-color);
 }
 
 .portfolio-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .project-img {
@@ -1845,33 +1812,30 @@ section,
 }
 
 .project-desc {
-  color: #ffffff !important;
+  color: var(--default-color) !important;
   font-size: 14px;
   line-height: 1.7;
 }
 
 .tech-icons i {
-  color: #fff;
-  opacity: 0.85;
-  transition: 0.2s;
+  margin: 0 6px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .tech-icons i:hover {
-  opacity: 1;
+  transform: scale(1.2);
 }
 
 h4 {
-  color: #fff;
+  color: var(--heading-color);
 }
 
 .section-title p {
-  color: #ddd;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
 .services .service-header {
   margin-bottom: 60px;
 }
@@ -1929,8 +1893,9 @@ h4 {
 }
 
 .services .service-header .service-summary .service-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
   color: var(--contrast-color);
+  box-shadow: 0 5px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .services .service-header .service-summary .service-btn:hover i {
@@ -1946,8 +1911,10 @@ h4 {
 .services .service-card {
   padding: 40px 40px 40px 40px;
   margin-bottom: 30px;
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 88%);
   transition: all 0.3s ease;
+  background-color: var(--surface-color);
+  border-radius: 8px;
 }
 
 .services .service-card .service-icon {
@@ -2035,12 +2002,13 @@ h4 {
 
 .services .service-card:hover {
   border-color: transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .services .service-card:hover::before {
   opacity: 1;
   visibility: visible;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
 }
 
 .services .service-card:hover h3 a {
@@ -2087,9 +2055,7 @@ h4 {
   }
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
+
 .testimonials .testimonial-masonry {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2264,9 +2230,7 @@ h4 {
   }
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+
 .contact .info-box {
   background-color: var(--accent-color);
   color: var(--contrast-color);
@@ -2415,12 +2379,10 @@ h4 {
 }
 
 .contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
+
 .portfolio-details .portfolio-details-slider {
   position: relative;
   overflow: hidden;
@@ -2496,7 +2458,7 @@ h4 {
 }
 
 .portfolio-details .portfolio-info ul li a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--accent-color), black 25%);
   text-decoration: underline;
 }
 
@@ -2561,9 +2523,7 @@ h4 {
   }
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
+
 .service-details .service-details-slider {
   position: relative;
   overflow: hidden;
@@ -2734,13 +2694,4 @@ h4 {
   }
 }
 
-
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
-
-
+.starter-section {}
