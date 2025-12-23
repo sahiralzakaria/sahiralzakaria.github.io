@@ -394,13 +394,18 @@ h6 {
     }
 
     .hero-content {
-        margin-top: 20px;
+        margin-top: 0px;
     }
 }
 
 @media (max-width: 768px) {
     .navmenu ul {
         gap: 10px;
+    }
+
+    .section,
+    .section {
+        padding: 0px;
     }
 
     .navmenu a {
@@ -412,6 +417,10 @@ h6 {
         width: 40px;
         height: 40px;
         font-size: 16px;
+    }
+
+    .hero-text .description {
+        margin-bottom: 0px;
     }
 }
 
@@ -711,7 +720,7 @@ section,
     font-size: 18px;
     line-height: 1.6;
     color: rgba(0, 0, 0, 0.65);
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     max-width: 500px;
 }
 
@@ -886,6 +895,13 @@ section,
         margin-bottom: 0px;
     }
 
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .hero .hero-text h1 {
         font-size: 56px;
     }
@@ -911,6 +927,7 @@ section,
         order: -1;
         margin-bottom: 40px;
     }
+
 }
 
 @media (max-width: 768px) {
